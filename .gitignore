@@ -172,3 +172,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Data specific ignores 
+# Assuming VHI data folder is named 'vhi'
+vhi/
+*.csv
+*.xlsx 
+*.pkl 
+*.json 
