@@ -107,8 +107,8 @@ with st.sidebar:
 f = filters
 filtered_df = df_all[
     (df_all['area'] == f['region']) &
-    (df_all['Week'] >= f['week_range'][0]) & (df_all['Week'] <= f['week_range'][1]) &
-    (df_all['Year'] >= f['year_range'][0]) & (df_all['Year'] <= f['year_range'][1])
+    (df_all['Week'].between(f['week_range'][0], f['week_range'][1])) &
+    (df_all['Year'].between(f['year_range'][0], f['year_range'][1]))
 ].copy()
 
 # Сортування фільтрованих даних
